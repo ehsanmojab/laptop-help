@@ -70,33 +70,16 @@
 
 <script setup>
 import employee1 from '../assets/images/employee1.jpg'
-import employee2 from '../assets/images/employee2.jpg'
 import { useScrollAnimation } from '../composables/useScrollAnimation'
 
 useScrollAnimation()
 
 const members = [
   {
-    name: 'علی احمدی',
+    name: 'احسان مجاب',
     role: 'مدیر و مشاور ارشد',
-    bio: 'با بیش از ۷ سال تجربه در حوزه فناوری و مشاوره خرید لپتاپ، علی بنیان‌گذار و مدیر مجموعه مشاوره خرید لپتاپ است.',
+    bio: 'با بیش از ۷ سال تجربه در حوزه فناوری و مشاوره خرید لپتاپ، احسان بنیان‌گذار و مدیر مجموعه مشاوره خرید لپتاپ است.',
     image: employee1,
-    linkedin: '#',
-    twitter: '#'
-  },
-  {
-    name: 'محمد رضایی',
-    role: 'کارشناس فنی و تست',
-    bio: 'متخصص سخت‌افزار و تست سلامت لپتاپ‌های استوک. محمد با دقت بالا، تمام قطعات لپتاپ را بررسی و ارزیابی می‌کند.',
-    image: employee2,
-    linkedin: '#',
-    twitter: '#'
-  },
-  {
-    name: 'سارا محمدی',
-    role: 'مشاور خرید و پشتیبانی',
-    bio: 'سارا با تجربه گسترده در ارتباط با مشتریان، بهترین پیشنهادات را ارائه و تا انتهای فرآیند خرید همراه شما است.',
-    image: null,
     linkedin: '#',
     twitter: '#'
   }
@@ -178,13 +161,15 @@ const values = [
 }
 
 .team__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
   gap: var(--space-8);
 }
 
 /* Member Card */
 .member-card {
+  max-width: 400px;
+  width: 100%;
   border-radius: var(--radius-2xl);
   background: var(--surface-card);
   border: 1px solid var(--color-neutral-100);
