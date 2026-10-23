@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="40%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0e3a47"/>
+    </linearGradient>
+    <linearGradient id="tealGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="amberGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="roseGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="blueGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <!-- Glass Filter -->
+    <filter id="shadow1" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="glow1" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .farsi-text { font-family: 'Vazirmatn', -apple-system, 'Segoe UI', Tahoma, sans-serif; direction: rtl; }
+    .title-txt { font-weight: 800; font-size: 16px; fill: #ffffff; }
+    .sub-txt { font-size: 11px; fill: #94a3b8; font-weight: 400; }
+    .glow-circle { opacity: 0.15; }
+  </style>
+
+  <!-- Background -->
+  <rect width="600" height="450" rx="20" fill="url(#bgGrad1)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <g stroke="#334155" stroke-width="0.75" opacity="0.3">
+    <line x1="50" y1="0" x2="50" y2="450"/>
+    <line x1="150" y1="0" x2="150" y2="450"/>
+    <line x1="250" y1="0" x2="250" y2="450"/>
+    <line x1="350" y1="0" x2="350" y2="450"/>
+    <line x1="450" y1="0" x2="450" y2="450"/>
+    <line x1="550" y1="0" x2="550" y2="450"/>
+    <line x1="0" y1="75" x2="600" y2="75"/>
+    <line x1="0" y1="150" x2="600" y2="150"/>
+    <line x1="0" y1="225" x2="600" y2="225"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="375" x2="600" y2="375"/>
+  </g>
+
+  <!-- Glow orbs in background -->
+  <circle cx="300" cy="360" r="140" fill="#0d9488" filter="url(#glow1)" class="glow-circle" opacity="0.25"/>
+  <circle cx="120" cy="120" r="90" fill="#6366f1" filter="url(#glow1)" class="glow-circle" opacity="0.18"/>
+  <circle cx="480" cy="140" r="100" fill="#06b6d4" filter="url(#glow1)" class="glow-circle" opacity="0.2"/>
+
+  <!-- Connecting light curves from cards to center -->
+  <g fill="none" stroke-width="1.8" opacity="0.5">
+    <path d="M 170 120 C 220 180, 260 260, 300 320" stroke="url(#tealGrad1)" stroke-dasharray="4,4"/>
+    <path d="M 430 115 C 380 180, 340 260, 300 320" stroke="url(#purpleGrad1)" stroke-dasharray="4,4"/>
+    <path d="M 130 220 C 190 240, 240 280, 300 325" stroke="url(#amberGrad1)" stroke-dasharray="4,4"/>
+    <path d="M 470 215 C 410 240, 360 280, 300 325" stroke="url(#blueGrad1)" stroke-dasharray="4,4"/>
+    <path d="M 180 320 C 220 330, 250 335, 300 340" stroke="url(#emeraldGrad1)" stroke-dasharray="4,4"/>
+    <path d="M 420 320 C 380 330, 350 335, 300 340" stroke="url(#roseGrad1)" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- Central Laptop Base -->
+  <g id="center-laptop" transform="translate(200, 300)">
+    <!-- Screen -->
+    <rect x="35" y="10" width="130" height="85" rx="8" fill="#090d16" stroke="#475569" stroke-width="2"/>
+    <rect x="40" y="15" width="120" height="75" rx="4" fill="#0f172a"/>
+    <!-- Laptop screen graphics -->
+    <rect x="46" y="22" width="108" height="14" rx="3" fill="#1e293b"/>
+    <text x="100" y="32" class="farsi-text" font-size="8" fill="#38bdf8" text-anchor="middle" font-weight="700">تحلیل نرم‌افزارها و سخت‌افزار</text>
+    <rect x="46" y="42" width="50" height="30" rx="3" fill="#1e293b" opacity="0.8"/>
+    <rect x="102" y="42" width="52" height="30" rx="3" fill="#1e293b" opacity="0.8"/>
+    <circle cx="71" cy="54" r="8" fill="#0d9488" opacity="0.3"/>
+    <text x="71" y="58" font-size="10" fill="#2dd4bf" text-anchor="middle">CPU</text>
+    <circle cx="128" cy="54" r="8" fill="#6366f1" opacity="0.3"/>
+    <text x="128" y="58" font-size="10" fill="#a5b4fc" text-anchor="middle">GPU</text>
+    <rect x="46" y="78" width="108" height="6" rx="2" fill="#334155"/>
+    <rect x="46" y="78" width="75" height="6" rx="2" fill="#06b6d4"/>
+    <!-- Keyboard Deck -->
+    <polygon points="10,95 190,95 205,115 -5,115" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+    <polygon points="18,97 182,97 195,110 5,110" fill="#1e293b"/>
+    <!-- Touchpad -->
+    <rect x="85" y="103" width="30" height="9" rx="2" fill="#475569"/>
+    <!-- Glow under laptop -->
+    <ellipse cx="100" cy="118" rx="100" ry="8" fill="#06b6d4" opacity="0.4" filter="url(#glow1)"/>
+  </g>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(160, 20)">
+    <rect x="0" y="0" width="280" height="38" rx="19" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.2" opacity="0.95" filter="url(#shadow1)"/>
+    <circle cx="25" cy="19" r="10" fill="#0ea5e9" opacity="0.2"/>
+    <text x="25" y="24" font-size="12" fill="#38bdf8" text-anchor="middle">🎓</text>
+    <text x="155" y="25" class="farsi-text" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">انتخاب تخصص و رشته‌های دانشگاهی</text>
+  </g>
+
+  <!-- Field Card 1: مهندسی کامپیوتر (Top Right) -->
+  <g transform="translate(370, 75)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="205" height="58" rx="14" fill="#0f172a" stroke="#0d9488" stroke-width="1.8" opacity="0.95"/>
+    <!-- Icon Box -->
+    <rect x="150" y="9" width="42" height="40" rx="10" fill="url(#tealGrad1)"/>
+    <text x="171" y="34" font-size="20" fill="#ffffff" text-anchor="middle">💻</text>
+    <!-- Texts -->
+    <text x="140" y="27" class="farsi-text title-txt" text-anchor="end">مهندسی کامپیوتر</text>
+    <text x="140" y="44" class="farsi-text sub-txt" text-anchor="end">برنامه‌نویسی، هوش مصنوعی، وب</text>
+  </g>
+
+  <!-- Field Card 2: مهندسی مکانیک (Top Left) -->
+  <g transform="translate(25, 80)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="205" height="58" rx="14" fill="#0f172a" stroke="#f59e0b" stroke-width="1.8" opacity="0.95"/>
+    <!-- Icon Box -->
+    <rect x="150" y="9" width="42" height="40" rx="10" fill="url(#amberGrad1)"/>
+    <text x="171" y="34" font-size="20" fill="#ffffff" text-anchor="middle">⚙️</text>
+    <!-- Texts -->
+    <text x="140" y="27" class="farsi-text title-txt" text-anchor="end">مهندسی مکانیک</text>
+    <text x="140" y="44" class="farsi-text sub-txt" text-anchor="end">SolidWorks, CATIA, Ansys</text>
+  </g>
+
+  <!-- Field Card 3: حسابداری و مالی (Mid Right) -->
+  <g transform="translate(390, 160)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="195" height="58" rx="14" fill="#0f172a" stroke="#10b981" stroke-width="1.8" opacity="0.95"/>
+    <!-- Icon Box -->
+    <rect x="142" y="9" width="42" height="40" rx="10" fill="url(#emeraldGrad1)"/>
+    <text x="163" y="34" font-size="20" fill="#ffffff" text-anchor="middle">📊</text>
+    <!-- Texts -->
+    <text x="132" y="27" class="farsi-text title-txt" text-anchor="end">حسابداری و مدیریت</text>
+    <text x="132" y="44" class="farsi-text sub-txt" text-anchor="end">Excel, سپیدار, همکاران سیستم</text>
+  </g>
+
+  <!-- Field Card 4: ریاضیات و کاربردها (Mid Left) -->
+  <g transform="translate(15, 165)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="205" height="58" rx="14" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.8" opacity="0.95"/>
+    <!-- Icon Box -->
+    <rect x="150" y="9" width="42" height="40" rx="10" fill="url(#purpleGrad1)"/>
+    <text x="171" y="34" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">∑ π</text>
+    <!-- Texts -->
+    <text x="140" y="27" class="farsi-text title-txt" text-anchor="end">ریاضیات و کاربردها</text>
+    <text x="140" y="44" class="farsi-text sub-txt" text-anchor="end">MATLAB, Python, R, آمار</text>
+  </g>
+
+  <!-- Field Card 5: طراحی، معماری و گرافیک (Bottom Left) -->
+  <g transform="translate(20, 255)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="195" height="58" rx="14" fill="#0f172a" stroke="#f43f5e" stroke-width="1.8" opacity="0.95"/>
+    <!-- Icon Box -->
+    <rect x="142" y="9" width="42" height="40" rx="10" fill="url(#roseGrad1)"/>
+    <text x="163" y="34" font-size="20" fill="#ffffff" text-anchor="middle">🎨</text>
+    <!-- Texts -->
+    <text x="132" y="27" class="farsi-text title-txt" text-anchor="end">معماری و گرافیک</text>
+    <text x="132" y="44" class="farsi-text sub-txt" text-anchor="end">Photoshop, AutoCAD, 3ds Max</text>
+  </g>
+
+  <!-- Field Card 6: مهندسی برق و عمران (Bottom Right) -->
+  <g transform="translate(385, 250)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="195" height="58" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"/>
+    <!-- Icon Box -->
+    <rect x="142" y="9" width="42" height="40" rx="10" fill="url(#blueGrad1)"/>
+    <text x="163" y="34" font-size="20" fill="#ffffff" text-anchor="middle">⚡</text>
+    <!-- Texts -->
+    <text x="132" y="27" class="farsi-text title-txt" text-anchor="end">مهندسی عمران و برق</text>
+    <text x="132" y="44" class="farsi-text sub-txt" text-anchor="end">ETABS, Altium, Revit</text>
+  </g>
+
+  <!-- Bottom Badge -->
+  <g transform="translate(175, 410)">
+    <rect x="0" y="0" width="250" height="28" rx="14" fill="#0284c7" opacity="0.2"/>
+    <text x="125" y="18" class="farsi-text" font-size="11" fill="#38bdf8" font-weight="600" text-anchor="middle">✨ انتخاب کانفیگ ایده‌آل بر اساس نیاز رشته شما</text>
+  </g>
+</svg>

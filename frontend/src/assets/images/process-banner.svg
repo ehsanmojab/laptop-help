@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="pBannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091422"/>
+      <stop offset="40%" stop-color="#0f2438"/>
+      <stop offset="100%" stop-color="#083344"/>
+    </linearGradient>
+    <linearGradient id="pGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="pGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="pGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="pGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="pCardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <style>
+    .farsi-b { font-family: 'Vazirmatn', -apple-system, sans-serif; direction: rtl; }
+  </style>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="440" rx="20" fill="url(#pBannerBg)"/>
+
+  <!-- Subtle connecting flow line in background -->
+  <path d="M 150 220 L 1050 220" stroke="#1e3a5f" stroke-width="3" stroke-dasharray="6,6"/>
+
+  <!-- Panel 1: تعیین رشته و نیاز (Rightmost in RTL) -->
+  <g transform="translate(900, 40)" filter="url(#pCardShadow)">
+    <rect width="260" height="360" rx="16" fill="#0f172a" stroke="#0284c7" stroke-width="1.5"/>
+    <rect x="0" y="0" width="260" height="6" rx="3" fill="url(#pGrad1)"/>
+    <!-- Step Badge -->
+    <rect x="15" y="18" width="80" height="26" rx="13" fill="#0284c7" opacity="0.2"/>
+    <text x="55" y="36" class="farsi-b" font-size="12" font-weight="800" fill="#38bdf8" text-anchor="middle">مرحله ۱</text>
+    <!-- Icon/Illustration -->
+    <circle cx="130" cy="115" r="46" fill="#0369a1" opacity="0.2"/>
+    <text x="130" y="128" font-size="38" text-anchor="middle">🎓</text>
+    <!-- Title & Desc -->
+    <text x="130" y="195" class="farsi-b" font-size="16" font-weight="800" fill="#f8fafc" text-anchor="middle">تعیین رشته و نیاز</text>
+    <text x="130" y="222" class="farsi-b" font-size="11" fill="#94a3b8" text-anchor="middle">شناسایی رشته دانشگاهی،</text>
+    <text x="130" y="240" class="farsi-b" font-size="11" fill="#94a3b8" text-anchor="middle">نرم‌افزارها و سقف بودجه</text>
+    <!-- Tags -->
+    <g transform="translate(20, 275)">
+      <rect x="0" y="0" width="105" height="24" rx="6" fill="#1e293b"/>
+      <text x="52" y="16" class="farsi-b" font-size="10" fill="#38bdf8" text-anchor="middle">کامپیوتر / مکانیک</text>
+      <rect x="115" y="0" width="105" height="24" rx="6" fill="#1e293b"/>
+      <text x="167" y="16" class="farsi-b" font-size="10" fill="#38bdf8" text-anchor="middle">حسابداری / ریاضی</text>
+    </g>
+  </g>
+
+  <!-- Panel 2: انتخاب نو یا استوک -->
+  <g transform="translate(615, 40)" filter="url(#pCardShadow)">
+    <rect width="260" height="360" rx="16" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="0" y="0" width="260" height="6" rx="3" fill="url(#pGrad2)"/>
+    <!-- Step Badge -->
+    <rect x="15" y="18" width="80" height="26" rx="13" fill="#10b981" opacity="0.2"/>
+    <text x="55" y="36" class="farsi-b" font-size="12" font-weight="800" fill="#34d399" text-anchor="middle">مرحله ۲</text>
+    <!-- Icon/Illustration -->
+    <circle cx="130" cy="115" r="46" fill="#059669" opacity="0.2"/>
+    <text x="130" y="128" font-size="38" text-anchor="middle">📦⚖️</text>
+    <!-- Title & Desc -->
+    <text x="130" y="195" class="farsi-b" font-size="16" font-weight="800" fill="#f8fafc" text-anchor="middle">انتخاب نو یا استوک</text>
+    <text x="130" y="222" class="farsi-b" font-size="11" fill="#94a3b8" text-anchor="middle">بررسی تخصصی ارزش خرید</text>
+    <text x="130" y="240" class="farsi-b" font-size="11" fill="#94a3b8" text-anchor="middle">لپتاپ آکبند در برابر استوک A++</text>
+    <!-- Tags -->
+    <g transform="translate(20, 275)">
+      <rect x="0" y="0" width="105" height="24" rx="6" fill="#1e293b"/>
+      <text x="52" y="16" class="farsi-b" font-size="10" fill="#34d399" text-anchor="middle">کارتن و پلمپ نو</text>
+      <rect x="115" y="0" width="105" height="24" rx="6" fill="#1e293b"/>
+      <text x="167" y="16" class="farsi-b" font-size="10" fill="#34d399" text-anchor="middle">استوک گرید A++</text>
+    </g>
+  </g>
+
+  <!-- Panel 3: تعیین مدل و مشخصات -->
+  <g transform="translate(325, 40)" filter="url(#pCardShadow)">
+    <rect width="260" height="360" rx="16" fill="#0f172a" stroke="#6366f1" stroke-width="1.5"/>
+    <rect x="0" y="0" width="260" height="6" rx="3" fill="url(#pGrad3)"/>
+    <!-- Step Badge -->
+    <rect x="15" y="18" width="80" height="26" rx="13" fill="#6366f1" opacity="0.2"/>
+    <text x="55" y="36" class="farsi-b" font-size="12" font-weight="800" fill="#a5b4fc" text-anchor="middle">مرحله ۳</text>
+    <!-- Icon/Illustration -->
+    <circle cx="130" cy="115" r="46" fill="#4f46e5" opacity="0.2"/>
+    <text x="130" y="128" font-size="38" text-anchor="middle">📊💻</text>
+    <!-- Title & Desc -->
+    <text x="130" y="195" class="farsi-b" font-size="16" font-weight="800" fill="#f8fafc" text-anchor="middle">تعیین مدل و مشخصات</text>
+    <text x="130" y="222" class="farsi-b" font-size="11" fill="#94a3b8" text-anchor="middle">تحلیل سخت‌افزار در Task Manager</text>
+    <text x="130" y="240" class="farsi-b" font-size="11" fill="#94a3b8" text-anchor="middle">پردازنده، کارت گرافیک، رم و SSD</text>
+    <!-- Tags -->
+    <g transform="translate(20, 275)">
+      <rect x="0" y="0" width="105" height="24" rx="6" fill="#1e293b"/>
+      <text x="52" y="16" class="farsi-b" font-size="10" fill="#a5b4fc" text-anchor="middle">Intel / Ryzen CPU</text>
+      <rect x="115" y="0" width="105" height="24" rx="6" fill="#1e293b"/>
+      <text x="167" y="16" class="farsi-b" font-size="10" fill="#a5b4fc" text-anchor="middle">RTX GPU / NVMe</text>
+    </g>
+  </g>
+
+  <!-- Panel 4: همراهی و تست سلامت (Leftmost in RTL) -->
+  <g transform="translate(40, 40)" filter="url(#pCardShadow)">
+    <rect width="260" height="360" rx="16" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="260" height="6" rx="3" fill="url(#pGrad4)"/>
+    <!-- Step Badge -->
+    <rect x="15" y="18" width="80" height="26" rx="13" fill="#14b8a6" opacity="0.2"/>
+    <text x="55" y="36" class="farsi-b" font-size="12" font-weight="800" fill="#2dd4bf" text-anchor="middle">مرحله ۴</text>
+    <!-- Icon/Illustration -->
+    <circle cx="130" cy="115" r="46" fill="#0f766e" opacity="0.2"/>
+    <text x="130" y="128" font-size="38" text-anchor="middle">🤝🛡️</text>
+    <!-- Title & Desc -->
+    <text x="130" y="195" class="farsi-b" font-size="16" font-weight="800" fill="#f8fafc" text-anchor="middle">همراهی و تست سلامت</text>
+    <text x="130" y="222" class="farsi-b" font-size="11" fill="#94a3b8" text-anchor="middle">همراهی در خرید، تست کامل قطعات</text>
+    <text x="130" y="240" class="farsi-b" font-size="11" fill="#94a3b8" text-anchor="middle">و تحویل مطمئن با مهلت تست</text>
+    <!-- Tags -->
+    <g transform="translate(20, 275)">
+      <rect x="0" y="0" width="105" height="24" rx="6" fill="#1e293b"/>
+      <text x="52" y="16" class="farsi-b" font-size="10" fill="#2dd4bf" text-anchor="middle">تست باتری و هارد</text>
+      <rect x="115" y="0" width="105" height="24" rx="6" fill="#1e293b"/>
+      <text x="167" y="16" class="farsi-b" font-size="10" fill="#2dd4bf" text-anchor="middle">تحویل با ضمانت</text>
+    </g>
+  </g>
+</svg>

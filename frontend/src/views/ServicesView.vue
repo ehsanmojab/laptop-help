@@ -1,0 +1,383 @@
+<template>
+  <div class="services-page">
+    <!-- Page Header -->
+    <section class="page-header" id="services-header">
+      <div class="page-header__bg"></div>
+      <div class="container page-header__content">
+        <h1 class="page-header__title">خدمات ما</h1>
+        <p class="page-header__subtitle">
+          فرآیند مشاوره ما در ۴ مرحله ساده و مشخص انجام می‌شود تا شما با اطمینان کامل، بهترین لپتاپ را انتخاب کنید.
+        </p>
+      </div>
+    </section>
+
+    <!-- Phases Section -->
+    <section class="phases" id="phases-section">
+      <div
+        v-for="(phase, index) in phases"
+        :key="index"
+        class="phase"
+        :style="{ background: phase.bg }"
+        :id="'phase-' + (index + 1)"
+      >
+        <div class="container phase__inner">
+          <div class="phase__number-wrap">
+            <div class="phase__number" :style="{ background: phase.numberBg, color: phase.numberColor }">
+              {{ toPersianNum(index + 1) }}
+            </div>
+            <div class="phase__line" v-if="index < phases.length - 1" :style="{ background: phase.lineColor }"></div>
+          </div>
+          <div class="phase__content">
+            <div class="phase__badge" :style="{ background: phase.badgeBg, color: phase.badgeColor }">
+              مرحله {{ toPersianNum(index + 1) }}
+            </div>
+            <h2 class="phase__title" :style="{ color: phase.titleColor }">{{ phase.title }}</h2>
+            <p class="phase__desc" :style="{ color: phase.descColor }">{{ phase.description }}</p>
+            <ul class="phase__features">
+              <li v-for="(feature, fi) in phase.features" :key="fi" :style="{ color: phase.featureColor }">
+                <span class="phase__check" :style="{ background: phase.checkBg, color: phase.checkColor }">✓</span>
+                {{ feature }}
+              </li>
+            </ul>
+          </div>
+          <div class="phase__visual-wrap">
+            <div class="phase__image-card">
+              <img :src="phase.image" :alt="phase.title" class="phase__image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</template>
+
+<script setup>
+import phase1Img from '../assets/images/phase1.jpg'
+import phase2Img from '../assets/images/phase2.jpg'
+import phase3Img from '../assets/images/phase3-task-manager.svg'
+import phase4Img from '../assets/images/phase4.jpg'
+
+const phases = [
+  {
+    title: 'تعیین رشته و نیاز موردنظر',
+    description: 'در اولین قدم، ما با شما گفتگو می‌کنیم تا رشته تحصیلی یا حوزه کاری، نرم‌افزارهای مورد استفاده، و نیازهای دقیق شما را بشناسیم. این مرحله پایه و اساس یک خرید هوشمندانه است.',
+    image: phase1Img,
+    features: [
+      'بررسی رشته تحصیلی و حوزه کاری',
+      'شناسایی نرم‌افزارهای مورد نیاز',
+      'تعیین بودجه و اولویت‌های شما'
+    ],
+    // Light teal
+    bg: 'linear-gradient(135deg, hsl(195, 60%, 96%), hsl(180, 50%, 94%))',
+    numberBg: 'linear-gradient(135deg, hsl(195, 65%, 50%), hsl(170, 55%, 48%))',
+    numberColor: 'white',
+    lineColor: 'hsl(195, 40%, 85%)',
+    badgeBg: 'hsla(195, 65%, 50%, 0.1)',
+    badgeColor: 'hsl(195, 65%, 42%)',
+    titleColor: 'hsl(195, 70%, 20%)',
+    descColor: 'hsl(195, 30%, 40%)',
+    featureColor: 'hsl(195, 25%, 35%)',
+    checkBg: 'hsla(195, 65%, 50%, 0.12)',
+    checkColor: 'hsl(195, 65%, 42%)'
+  },
+  {
+    title: 'انتخاب لپتاپ استوک و یا لپتاپ نو',
+    description: 'بر اساس نیاز و بودجه شما، بهترین گزینه‌ها چه نو و چه استوک را بررسی و مزایا و معایب هرکدام را توضیح می‌دهیم. هدف ما بهینه‌ترین خرید برای شماست.',
+    image: phase2Img,
+    features: [
+      'مقایسه مزایا و معایب نو و استوک',
+      'بررسی بودجه و ارزش خرید',
+      'پیشنهاد بهترین برندها و فروشگاه‌ها'
+    ],
+    // Medium teal
+    bg: 'linear-gradient(135deg, hsl(195, 55%, 90%), hsl(185, 50%, 87%))',
+    numberBg: 'linear-gradient(135deg, hsl(195, 60%, 44%), hsl(175, 55%, 42%))',
+    numberColor: 'white',
+    lineColor: 'hsl(195, 35%, 78%)',
+    badgeBg: 'hsla(195, 60%, 44%, 0.1)',
+    badgeColor: 'hsl(195, 60%, 38%)',
+    titleColor: 'hsl(195, 65%, 18%)',
+    descColor: 'hsl(195, 25%, 38%)',
+    featureColor: 'hsl(195, 20%, 33%)',
+    checkBg: 'hsla(195, 60%, 44%, 0.12)',
+    checkColor: 'hsl(195, 60%, 38%)'
+  },
+  {
+    title: 'تعیین نهایی لپتاپ و مدل و مشخصات آن',
+    description: 'پس از بررسی گزینه‌های مختلف، مدل نهایی لپتاپ را با تمام مشخصات فنی (پردازنده، رم، حافظه، گرافیک و...) مشخص می‌کنیم و دلایل انتخاب را کاملاً توضیح می‌دهیم.',
+    image: phase3Img,
+    features: [
+      'تعیین دقیق مشخصات فنی مورد نیاز',
+      'مقایسه مدل‌های مشابه',
+      'ارائه گزارش کامل با دلایل انتخاب'
+    ],
+    // Deep teal
+    bg: 'linear-gradient(135deg, hsl(195, 50%, 82%), hsl(190, 48%, 78%))',
+    numberBg: 'linear-gradient(135deg, hsl(195, 58%, 38%), hsl(180, 52%, 36%))',
+    numberColor: 'white',
+    lineColor: 'hsl(195, 30%, 70%)',
+    badgeBg: 'hsla(195, 55%, 38%, 0.12)',
+    badgeColor: 'hsl(195, 55%, 32%)',
+    titleColor: 'hsl(195, 60%, 15%)',
+    descColor: 'hsl(195, 22%, 35%)',
+    featureColor: 'hsl(195, 18%, 30%)',
+    checkBg: 'hsla(195, 55%, 38%, 0.14)',
+    checkColor: 'hsl(195, 55%, 32%)'
+  },
+  {
+    title: 'همراهی مشتری تا انتهای خرید و انجام تست سلامت لپتاپ (استوک)',
+    description: 'در آخرین مرحله، ما همراه شما هستیم. از یافتن فروشنده معتبر تا لحظه خرید و برای لپتاپ‌های استوک، تست سلامت کامل شامل بررسی هارد، باتری، صفحه نمایش و سایر قطعات انجام می‌دهیم.',
+    image: phase4Img,
+    features: [
+      'همراهی در فرآیند خرید',
+      'تست سلامت کامل لپتاپ استوک',
+      'پشتیبانی پس از خرید'
+    ],
+    // Dark teal
+    bg: 'linear-gradient(135deg, hsl(195, 48%, 72%), hsl(190, 45%, 68%))',
+    numberBg: 'linear-gradient(135deg, hsl(195, 55%, 30%), hsl(185, 50%, 28%))',
+    numberColor: 'white',
+    lineColor: 'transparent',
+    badgeBg: 'hsla(0, 0%, 100%, 0.2)',
+    badgeColor: 'hsl(195, 50%, 20%)',
+    titleColor: 'hsl(195, 60%, 12%)',
+    descColor: 'hsl(195, 20%, 28%)',
+    featureColor: 'hsl(195, 15%, 25%)',
+    checkBg: 'hsla(0, 0%, 100%, 0.25)',
+    checkColor: 'hsl(195, 50%, 22%)'
+  }
+]
+
+
+
+function toPersianNum(num) {
+  const persianDigits = '۰۱۲۳۴۵۶۷۸۹'
+  return String(num).replace(/\d/g, d => persianDigits[d])
+}
+</script>
+
+<style scoped>
+/* ============================================
+   Page Header
+   ============================================ */
+.page-header {
+  position: relative;
+  padding: calc(var(--nav-height) + var(--space-16)) 0 var(--space-16);
+  overflow: hidden;
+}
+
+.page-header__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-primary-600) 50%, var(--color-accent-600) 100%);
+}
+
+.page-header__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, hsla(170, 60%, 50%, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 30%, hsla(195, 65%, 60%, 0.1) 0%, transparent 50%);
+}
+
+.page-header__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.page-header__title {
+  font-size: var(--font-size-4xl);
+  font-weight: 900;
+  color: white;
+  margin-bottom: var(--space-4);
+}
+
+.page-header__subtitle {
+  font-size: var(--font-size-lg);
+  color: hsla(195, 30%, 85%, 0.9);
+  max-width: 600px;
+  margin-inline: auto;
+  line-height: 1.9;
+}
+
+/* ============================================
+   Phases
+   ============================================ */
+.phase {
+  width: 100%;
+  padding: var(--space-16) 0;
+}
+
+.phase__inner {
+  display: grid;
+  grid-template-columns: auto 1fr 340px;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+/* Number column */
+.phase__number-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.phase__number {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  font-weight: 900;
+  box-shadow: 0 4px 15px hsla(195, 65%, 42%, 0.25);
+  flex-shrink: 0;
+}
+
+.phase__line {
+  width: 3px;
+  flex: 1;
+  min-height: 80px;
+  border-radius: 2px;
+  margin-top: var(--space-4);
+}
+
+/* Content column */
+.phase__badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.phase__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+  line-height: 1.5;
+}
+
+.phase__desc {
+  font-size: var(--font-size-base);
+  line-height: 1.9;
+  margin-bottom: var(--space-6);
+  max-width: 560px;
+}
+
+.phase__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.phase__features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.phase__check {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+/* Visual / Image column */
+.phase__visual-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phase__image-card {
+  width: 100%;
+  max-width: 340px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 10px 30px hsla(195, 65%, 15%, 0.15);
+  border: 1px solid hsla(195, 65%, 45%, 0.2);
+  background: hsla(0, 0%, 100%, 0.4);
+  backdrop-filter: blur(8px);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.phase__image-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 40px hsla(195, 65%, 15%, 0.25);
+}
+
+.phase__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 960px) {
+  .phase__inner {
+    grid-template-columns: auto 1fr;
+    gap: var(--space-6);
+  }
+
+  .phase__visual-wrap {
+    grid-column: 2;
+    margin-top: var(--space-4);
+  }
+
+  .phase__image-card {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 600px) {
+  .phase__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .phase__number-wrap {
+    flex-direction: row;
+    gap: var(--space-4);
+  }
+
+  .phase__line {
+    display: none;
+  }
+
+  .phase__visual-wrap {
+    grid-column: 1;
+    margin-top: var(--space-4);
+  }
+
+  .phase__image-card {
+    max-width: 100%;
+  }
+
+  .phase__title {
+    font-size: var(--font-size-xl);
+  }
+
+
+}
+</style>
