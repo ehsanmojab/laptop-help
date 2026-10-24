@@ -583,6 +583,71 @@ html.dark .phase__check {
   color: #38bdf8 !important;
 }
 
+/* Services Contact Section Dark Mode */
+html.dark .services-contact {
+  background: var(--surface-base) !important;
+  border-top: 1px solid var(--color-neutral-100) !important;
+}
+
+html.dark .services-contact__card {
+  background: var(--surface-card) !important;
+  border-color: var(--color-neutral-100) !important;
+  box-shadow: 0 20px 45px hsla(0, 0%, 0%, 0.4), inset 0 1px 0 hsla(215, 30%, 30%, 0.4) !important;
+}
+
+html.dark .services-contact__bg {
+  background: radial-gradient(circle at 50% 0%, hsla(195, 80%, 50%, 0.15), transparent 70%) !important;
+}
+
+html.dark .services-contact__badge {
+  background: hsla(195, 70%, 50%, 0.16) !important;
+  color: #38bdf8 !important;
+  border-color: hsla(195, 70%, 50%, 0.35) !important;
+}
+
+html.dark .services-contact__title {
+  color: #ffffff !important;
+}
+
+html.dark .services-contact__desc {
+  color: hsl(215, 26%, 84%) !important;
+}
+
+html.dark .services-contact__btn--primary {
+  background: linear-gradient(135deg, #0284c7, #0d9488) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px hsla(195, 80%, 40%, 0.4) !important;
+}
+
+html.dark .services-contact__btn--primary:hover {
+  background: linear-gradient(135deg, #0369a1, #0f766e) !important;
+  box-shadow: 0 8px 24px hsla(195, 80%, 40%, 0.55) !important;
+}
+
+html.dark .services-contact__btn--call {
+  background: hsla(150, 50%, 25%, 0.25) !important;
+  color: #34d399 !important;
+  border-color: hsla(150, 50%, 40%, 0.4) !important;
+}
+
+html.dark .services-contact__btn--call:hover {
+  background: hsla(150, 50%, 30%, 0.4) !important;
+  color: #6ee7b7 !important;
+}
+
+html.dark .services-contact__btn--forum {
+  background: var(--surface-elevated) !important;
+  color: hsl(215, 30%, 90%) !important;
+  border-color: var(--color-neutral-200) !important;
+  box-shadow: none !important;
+}
+
+html.dark .services-contact__btn--forum:hover {
+  background: hsla(215, 30%, 25%, 0.9) !important;
+  color: #ffffff !important;
+  border-color: #38bdf8 !important;
+}
+
 /* Page Headers Dark Mode */
 html.dark .page-header {
   background: linear-gradient(135deg, hsl(222, 38%, 15%) 0%, hsl(215, 34%, 18%) 100%) !important;

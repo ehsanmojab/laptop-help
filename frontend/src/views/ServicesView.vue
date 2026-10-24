@@ -547,4 +547,71 @@ function toPersianNum(num) {
     width: 100%;
   }
 }
+
+/* ============================================
+   Dark Mode Support for Contact Section
+   ============================================ */
+:global(html.dark) .services-contact {
+  background: var(--surface-base);
+  border-top: 1px solid var(--color-neutral-100);
+}
+
+:global(html.dark) .services-contact__card {
+  background: var(--surface-card);
+  border: 1px solid var(--color-neutral-100);
+  box-shadow: 0 20px 45px hsla(0, 0%, 0%, 0.4), inset 0 1px 0 hsla(215, 30%, 30%, 0.4);
+}
+
+:global(html.dark) .services-contact__bg {
+  background: radial-gradient(circle at 50% 0%, hsla(195, 80%, 50%, 0.15), transparent 70%);
+}
+
+:global(html.dark) .services-contact__badge {
+  background: hsla(195, 70%, 50%, 0.16);
+  color: #38bdf8;
+  border-color: hsla(195, 70%, 50%, 0.35);
+}
+
+:global(html.dark) .services-contact__title {
+  color: #ffffff;
+}
+
+:global(html.dark) .services-contact__desc {
+  color: hsl(215, 26%, 84%);
+}
+
+:global(html.dark) .services-contact__btn--primary {
+  background: linear-gradient(135deg, #0284c7, #0d9488);
+  color: #ffffff;
+  box-shadow: 0 4px 16px hsla(195, 80%, 40%, 0.4);
+}
+
+:global(html.dark) .services-contact__btn--primary:hover {
+  background: linear-gradient(135deg, #0369a1, #0f766e);
+  box-shadow: 0 8px 24px hsla(195, 80%, 40%, 0.55);
+}
+
+:global(html.dark) .services-contact__btn--call {
+  background: hsla(150, 50%, 25%, 0.25);
+  color: #34d399;
+  border-color: hsla(150, 50%, 40%, 0.4);
+}
+
+:global(html.dark) .services-contact__btn--call:hover {
+  background: hsla(150, 50%, 30%, 0.4);
+  color: #6ee7b7;
+}
+
+:global(html.dark) .services-contact__btn--forum {
+  background: var(--surface-elevated);
+  color: hsl(215, 30%, 90%);
+  border-color: var(--color-neutral-200);
+  box-shadow: none;
+}
+
+:global(html.dark) .services-contact__btn--forum:hover {
+  background: hsla(215, 30%, 25%, 0.9);
+  color: #ffffff;
+  border-color: #38bdf8;
+}
 </style>
