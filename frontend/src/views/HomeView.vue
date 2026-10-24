@@ -43,8 +43,8 @@
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
               </svg>
             </router-link>
-            <router-link to="/team" class="hero__btn hero__btn--secondary" id="hero-cta-team">
-              <span>معرفی تیم ما</span>
+            <router-link to="/contact" class="hero__btn hero__btn--secondary" id="hero-cta-contact">
+              <span>تماس با ما</span>
             </router-link>
           </div>
         </div>

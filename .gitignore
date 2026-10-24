@@ -12,6 +12,7 @@ node_modules/
 
 # Production builds
 dist/
+!frontend/dist/
 dist-ssr/
 *.tsbuildinfo
 

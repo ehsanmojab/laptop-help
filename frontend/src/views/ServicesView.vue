@@ -49,6 +49,39 @@
       </div>
     </section>
 
+    <!-- Contact CTA Section -->
+    <section class="services-contact" id="services-contact-section">
+      <div class="container">
+        <div class="services-contact__card scroll-driven-item">
+          <div class="services-contact__bg"></div>
+          <div class="services-contact__content">
+            <span class="services-contact__badge">مشاوره تخصصی و همراهی کامل</span>
+            <h2 class="services-contact__title">نیاز به راهنمایی بیشتر دارید؟ تماس با ما</h2>
+            <p class="services-contact__desc">
+              اگر در انتخاب بین مدل‌ها تردید دارید یا به بررسی سلامت لپتاپ استوک نیاز دارید، مشاوران ما از طریق تماس تلفنی، پیام‌رسان‌ها و تالار گفتگو همراه شما هستند.
+            </p>
+            <div class="services-contact__actions">
+              <router-link to="/contact" class="services-contact__btn services-contact__btn--primary" id="btn-services-contact">
+                <span>تماس با ما</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                  <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+              </router-link>
+              <a href="tel:09123456789" class="services-contact__btn services-contact__btn--call" id="btn-services-call">
+                <span>تماس تلفنی سریع</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </a>
+              <router-link to="/forum" class="services-contact__btn services-contact__btn--forum" id="btn-services-forum">
+                <span>پرسش در تالار گفتگو</span>
+              </router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
 
@@ -377,7 +410,136 @@ function toPersianNum(num) {
   .phase__title {
     font-size: var(--font-size-xl);
   }
+}
 
+/* ============================================
+   Contact CTA Section at End of Services
+   ============================================ */
+.services-contact {
+  padding: var(--space-16) 0 var(--space-20);
+  background: var(--color-neutral-900);
+  position: relative;
+  overflow: hidden;
+}
 
+.services-contact__card {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  padding: var(--space-12) var(--space-8);
+  background: linear-gradient(135deg, hsla(195, 80%, 15%, 0.95), hsla(210, 25%, 12%, 0.98));
+  border: 1px solid hsla(195, 65%, 45%, 0.25);
+  box-shadow: 0 20px 50px hsla(0, 0%, 0%, 0.4), inset 0 1px 0 hsla(195, 80%, 70%, 0.15);
+  text-align: center;
+  overflow: hidden;
+}
+
+.services-contact__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, hsla(195, 75%, 45%, 0.25), transparent 70%);
+  pointer-events: none;
+}
+
+.services-contact__content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.services-contact__badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: hsla(195, 75%, 45%, 0.18);
+  border: 1px solid hsla(195, 75%, 55%, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--color-primary-300);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.services-contact__title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.35;
+  margin-bottom: var(--space-4);
+}
+
+.services-contact__desc {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-300);
+  line-height: 1.8;
+  margin-bottom: var(--space-8);
+}
+
+.services-contact__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.services-contact__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 12px 24px;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.services-contact__btn--primary {
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-accent-500));
+  color: #ffffff;
+  box-shadow: 0 4px 16px hsla(195, 75%, 45%, 0.35);
+}
+
+.services-contact__btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px hsla(195, 75%, 45%, 0.5);
+}
+
+.services-contact__btn--call {
+  background: hsla(150, 55%, 40%, 0.18);
+  color: #34d399;
+  border: 1px solid hsla(150, 55%, 45%, 0.35);
+}
+
+.services-contact__btn--call:hover {
+  background: hsla(150, 55%, 40%, 0.28);
+  transform: translateY(-2px);
+  color: #6ee7b7;
+}
+
+.services-contact__btn--forum {
+  background: hsla(210, 20%, 25%, 0.5);
+  color: var(--color-neutral-200);
+  border: 1px solid hsla(210, 20%, 35%, 0.4);
+}
+
+.services-contact__btn--forum:hover {
+  background: hsla(210, 20%, 30%, 0.7);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .services-contact__card {
+    padding: var(--space-8) var(--space-4);
+  }
+  .services-contact__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .services-contact__btn {
+    width: 100%;
+  }
 }
 </style>
