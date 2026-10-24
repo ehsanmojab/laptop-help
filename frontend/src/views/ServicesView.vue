@@ -417,7 +417,7 @@ function toPersianNum(num) {
    ============================================ */
 .services-contact {
   padding: var(--space-16) 0 var(--space-20);
-  background: var(--color-neutral-900);
+  background: linear-gradient(180deg, hsl(190, 45%, 68%) 0%, hsl(195, 48%, 62%) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -426,9 +426,11 @@ function toPersianNum(num) {
   position: relative;
   border-radius: var(--radius-2xl);
   padding: var(--space-12) var(--space-8);
-  background: linear-gradient(135deg, hsla(195, 80%, 15%, 0.95), hsla(210, 25%, 12%, 0.98));
-  border: 1px solid hsla(195, 65%, 45%, 0.25);
-  box-shadow: 0 20px 50px hsla(0, 0%, 0%, 0.4), inset 0 1px 0 hsla(195, 80%, 70%, 0.15);
+  background: hsla(0, 0%, 100%, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid hsla(0, 0%, 100%, 0.85);
+  box-shadow: 0 20px 45px hsla(195, 65%, 20%, 0.15), inset 0 1px 0 hsla(0, 0%, 100%, 0.9);
   text-align: center;
   overflow: hidden;
 }
@@ -436,7 +438,7 @@ function toPersianNum(num) {
 .services-contact__bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 0%, hsla(195, 75%, 45%, 0.25), transparent 70%);
+  background: radial-gradient(circle at 50% 0%, hsla(195, 75%, 92%, 0.6), transparent 70%);
   pointer-events: none;
 }
 
@@ -450,26 +452,26 @@ function toPersianNum(num) {
 .services-contact__badge {
   display: inline-block;
   padding: 6px 16px;
-  background: hsla(195, 75%, 45%, 0.18);
-  border: 1px solid hsla(195, 75%, 55%, 0.3);
+  background: hsla(195, 65%, 45%, 0.12);
+  border: 1px solid hsla(195, 65%, 45%, 0.25);
   border-radius: var(--radius-full);
-  color: var(--color-primary-300);
+  color: hsl(195, 75%, 25%);
   font-size: var(--font-size-sm);
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: var(--space-4);
 }
 
 .services-contact__title {
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 800;
-  color: #ffffff;
+  color: hsl(195, 75%, 15%);
   line-height: 1.35;
   margin-bottom: var(--space-4);
 }
 
 .services-contact__desc {
   font-size: var(--font-size-base);
-  color: var(--color-neutral-300);
+  color: hsl(195, 25%, 32%);
   line-height: 1.8;
   margin-bottom: var(--space-8);
 }
@@ -496,38 +498,41 @@ function toPersianNum(num) {
 }
 
 .services-contact__btn--primary {
-  background: linear-gradient(135deg, var(--color-primary-500), var(--color-accent-500));
+  background: linear-gradient(135deg, hsl(195, 75%, 36%), hsl(175, 70%, 32%));
   color: #ffffff;
-  box-shadow: 0 4px 16px hsla(195, 75%, 45%, 0.35);
+  box-shadow: 0 4px 16px hsla(195, 75%, 30%, 0.3);
 }
 
 .services-contact__btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px hsla(195, 75%, 45%, 0.5);
+  background: linear-gradient(135deg, hsl(195, 75%, 30%), hsl(175, 70%, 28%));
+  box-shadow: 0 8px 24px hsla(195, 75%, 25%, 0.4);
 }
 
 .services-contact__btn--call {
-  background: hsla(150, 55%, 40%, 0.18);
-  color: #34d399;
-  border: 1px solid hsla(150, 55%, 45%, 0.35);
+  background: hsla(150, 60%, 40%, 0.12);
+  color: hsl(150, 70%, 25%);
+  border: 1px solid hsla(150, 60%, 40%, 0.35);
 }
 
 .services-contact__btn--call:hover {
-  background: hsla(150, 55%, 40%, 0.28);
+  background: hsla(150, 60%, 40%, 0.22);
   transform: translateY(-2px);
-  color: #6ee7b7;
+  color: hsl(150, 75%, 18%);
 }
 
 .services-contact__btn--forum {
-  background: hsla(210, 20%, 25%, 0.5);
-  color: var(--color-neutral-200);
-  border: 1px solid hsla(210, 20%, 35%, 0.4);
+  background: hsla(0, 0%, 100%, 0.75);
+  color: hsl(195, 65%, 25%);
+  border: 1px solid hsla(195, 40%, 65%, 0.45);
+  box-shadow: 0 2px 8px hsla(195, 50%, 30%, 0.08);
 }
 
 .services-contact__btn--forum:hover {
-  background: hsla(210, 20%, 30%, 0.7);
-  color: #ffffff;
+  background: #ffffff;
+  color: hsl(195, 80%, 18%);
   transform: translateY(-2px);
+  box-shadow: 0 6px 18px hsla(195, 50%, 30%, 0.15);
 }
 
 @media (max-width: 640px) {
