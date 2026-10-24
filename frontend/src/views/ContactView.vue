@@ -26,10 +26,10 @@
             <h3 class="channel-card__title">تماس تلفنی مستقیم</h3>
             <p class="channel-card__desc">گفتگوی مستقیم با مشاور ارشد خرید لپتاپ و پاسخگویی آنی به تمام سوالات فنی</p>
             <div class="channel-card__contact-box">
-              <span class="channel-card__val ltr-text">۰۹۱۲-۳۴۵-۶۷۸۹</span>
+              <span class="channel-card__val ltr-text">۰۹۳۳-۳۷۲-۹۲۸۰</span>
               <button 
                 class="copy-btn" 
-                @click="handleCopy('09123456789', 'شماره تماس')" 
+                @click="handleCopy('09333729280', 'شماره تماس')" 
                 title="کپی شماره"
                 aria-label="کپی شماره تماس"
               >
@@ -37,7 +37,7 @@
                 <Copy v-else :size="16" />
               </button>
             </div>
-            <a href="tel:09123456789" class="channel-card__btn channel-card__btn--call" id="btn-call">
+            <a href="tel:09333729280" class="channel-card__btn channel-card__btn--call" id="btn-call">
               <span>برقراری تماس</span>
               <ArrowLeft :size="18" />
             </a>
@@ -54,10 +54,10 @@
             <h3 class="channel-card__title">تلگرام (Telegram)</h3>
             <p class="channel-card__desc">ارسال مشخصات، عکس لپتاپ، استعلام قیمت و دریافت سریع لیست مدل‌های پیشنهادی</p>
             <div class="channel-card__contact-box">
-              <span class="channel-card__val ltr-text">@laptop_moshavere</span>
+              <span class="channel-card__val ltr-text">@laptop_help</span>
               <button 
                 class="copy-btn" 
-                @click="handleCopy('@laptop_moshavere', 'آیدی تلگرام')" 
+                @click="handleCopy('@laptop_help', 'آیدی تلگرام')" 
                 title="کپی آیدی"
                 aria-label="کپی آیدی تلگرام"
               >
@@ -65,7 +65,7 @@
                 <Copy v-else :size="16" />
               </button>
             </div>
-            <a href="https://t.me/laptop_moshavere" target="_blank" rel="noopener noreferrer" class="channel-card__btn channel-card__btn--telegram" id="btn-telegram">
+            <a href="https://t.me/laptop_help" target="_blank" rel="noopener noreferrer" class="channel-card__btn channel-card__btn--telegram" id="btn-telegram">
               <span>ارسال پیام در تلگرام</span>
               <ArrowLeft :size="18" />
             </a>
@@ -82,10 +82,10 @@
             <h3 class="channel-card__title">پیام‌رسان بله (Bale)</h3>
             <p class="channel-card__desc">ارتباط در بستر پیام‌رسان بله با سرعت بالا، بدون نیاز به فیلترشکن</p>
             <div class="channel-card__contact-box">
-              <span class="channel-card__val ltr-text">ble.ir/laptop_moshavere</span>
+              <span class="channel-card__val ltr-text">ble.ir/apache</span>
               <button 
                 class="copy-btn" 
-                @click="handleCopy('laptop_moshavere', 'کانال بله')" 
+                @click="handleCopy('apache', 'کانال بله')" 
                 title="کپی لینک"
                 aria-label="کپی لینک بله"
               >
@@ -93,7 +93,7 @@
                 <Copy v-else :size="16" />
               </button>
             </div>
-            <a href="https://ble.ir/laptop_moshavere" target="_blank" rel="noopener noreferrer" class="channel-card__btn channel-card__btn--bale" id="btn-bale">
+            <a href="https://ble.ir/apache" target="_blank" rel="noopener noreferrer" class="channel-card__btn channel-card__btn--bale" id="btn-bale">
               <span>ارسال پیام در بله</span>
               <ArrowLeft :size="18" />
             </a>
@@ -110,10 +110,10 @@
             <h3 class="channel-card__title">روبیکا (Rubika)</h3>
             <p class="channel-card__desc">ارتباط مستقیم و ارسال آسان پیام در روبیکا با تعرفه اینترنت نیم‌بها</p>
             <div class="channel-card__contact-box">
-              <span class="channel-card__val ltr-text">rubika.ir/laptop_moshavere</span>
+              <span class="channel-card__val ltr-text">rubika.ir/ehsanmojab</span>
               <button 
                 class="copy-btn" 
-                @click="handleCopy('laptop_moshavere', 'آیدی روبیکا')" 
+                @click="handleCopy('ehsanmojab', 'آیدی روبیکا')" 
                 title="کپی لینک"
                 aria-label="کپی آیدی روبیکا"
               >
@@ -121,7 +121,7 @@
                 <Copy v-else :size="16" />
               </button>
             </div>
-            <a href="https://rubika.ir/laptop_moshavere" target="_blank" rel="noopener noreferrer" class="channel-card__btn channel-card__btn--rubika" id="btn-rubika">
+            <a href="https://rubika.ir/ehsanmojab" target="_blank" rel="noopener noreferrer" class="channel-card__btn channel-card__btn--rubika" id="btn-rubika">
               <span>ارسال پیام در روبیکا</span>
               <ArrowLeft :size="18" />
             </a>
